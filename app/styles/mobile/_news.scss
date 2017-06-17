@@ -1,0 +1,41 @@
+@include phone {
+  .news {
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+  .news__tab {
+    padding: 0 15px;
+    margin-bottom: 15px;
+    margin-top: 40px;
+    flex-basis: 100%;
+    
+    & + & {
+      margin-left: 0px;
+    }
+    &:nth-child(2){
+      margin-top: 70px;
+    }
+  }
+  .news__content {
+    padding: 15px 0;
+
+    &._buttons {
+      padding-top: 15px;
+    }
+  }
+  .news__button {
+    width: 100%;
+    text-align: center;
+  }
+  .news__title {
+    margin-bottom: 10px;
+  }
+  .news__switches {
+    width: 100%;
+    top:-45px;
+  }
+  .news__switch {
+    width: 50%;
+    padding: 15px 30px;
+  }
+}

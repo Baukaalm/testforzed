@@ -1,0 +1,11 @@
+{
+  "name": "www",
+  "private": true,
+  "dependencies": {
+    "reset-scss": "^2.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
+  }
+}

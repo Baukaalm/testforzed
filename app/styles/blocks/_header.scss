@@ -1,0 +1,149 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 20px;
+  height: 100%;
+}
+
+.header__item {
+  height: 100%;
+
+  &._logo {
+    display: flex;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &._search {
+    display: flex;
+    margin-top: 30px;
+    flex-basis: 50%;
+    justify-content: space-between;
+    position: relative;
+  }
+}
+
+.header__title {
+  padding-top: 30px;
+  font-size: 30px;
+  padding-left: 50px;
+  color: #2f257d;
+  text-transform: uppercase;
+  font-family: 'noto_sansbold';
+}
+
+.header__searchdowns {
+  font-size: 15px;
+  color: #0bacd3;
+  position: relative;
+  padding: 20px 20px 0 0;
+  height: 100%;
+  width: 100%;
+  padding-right: 0;
+}
+
+.header__link {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  z-index: 100;
+  border-bottom: 1px solid currentColor;
+}
+
+.header__block {
+  margin-right: 30%;
+  text-align: right;
+  position: relative;
+  white-space: nowrap;
+}
+
+.header__arrow {
+  &:after {
+    content: "\2191";
+  }
+
+  &._active {
+    &:after {
+      content: "\2193";
+      position: relative;
+      z-index: 100;
+    }
+  }
+}
+
+.header__dropdown {
+  @extend %drop-down;
+  width: 170px;
+  background-image: url("../images/down-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+  background-size: 20px 20px;
+
+  &._active {
+    background-color: #0a97b9;
+    background-image: url("../images/up-arrow.svg");
+  }
+}
+/* Dropdown Button */
+.header__dropdowns {
+  position: relative;
+  display: inline-block;
+  flex-basis: 170px;
+}
+
+.header__languages {
+  display: none;
+  position: absolute;
+  background-color: #0a97b9;
+  z-index: 1;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  top: 53px;
+
+  &._show {
+    display: block;
+  }
+}
+
+.header__searchdown {
+  display: none;
+  position: absolute;
+  top: -19px;
+  right: -15px;
+  padding: 45px 15px 15px;
+  background-color: #fbf8f1;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.22);
+
+  &._show {
+    display: block;
+  }
+}
+
+.header__input {
+  padding: 20px;
+  min-width: 225px;
+  border: 1px solid #563743;
+  box-shadow: inset 0 3px 1px rgba(0,0,0,.075);
+  border-radius: 4px;
+  outline: none;
+  font-size: 15px;
+  color: #563743;
+  opacity: 0.7;
+
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.header__languages a {
+  color: #fff;
+  padding: 20px;
+  text-decoration: none;
+  width: 170px;
+  display: block;
+  text-transform: capitalize;
+
+  &:hover {
+    background-color: #3bacc7;
+  }
+}

@@ -1,0 +1,16 @@
+@include phone {
+  .products {
+    flex-wrap: wrap;
+    min-height: 1px;
+  }
+  .product {
+    margin-bottom: 15px;
+    flex-basis: 100%;
+    & + & {
+      margin-left: 0px;
+    }
+  }
+  .product__description {
+    font-size: 15px;
+  }
+}
