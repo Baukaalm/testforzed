@@ -1,13 +1,13 @@
-let dropdownElement = document.querySelector('.js-drop-down');
-let searchdownElement = document.querySelector('.js-drop-down-search');
-let searchInputElement = document.querySelector('.js-header-input');
-let searchArrowElement = document.querySelector('.js-header-arrow');
+const dropdownElement = document.querySelector('.js-drop-down');
+const searchdownElement = document.querySelector('.js-drop-down-search');
+const searchInputElement = document.querySelector('.js-header-input');
+const searchArrowElement = document.querySelector('.js-header-arrow');
 
 
 const checkEvents = (event) => {
   if (!event.target.matches('.js-drop-down')) {
 
-    let dropdowns = document.querySelectorAll('.js-drop-down-content');
+    const dropdowns = document.querySelectorAll('.js-drop-down-content');
     for (let i = 0; i < dropdowns.length; i++) {
       let openDropdown = dropdowns[i];
       if (openDropdown.classList.contains('_show')) {

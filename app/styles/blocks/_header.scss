@@ -58,13 +58,16 @@
 }
 
 .header__arrow {
+  position: relative;
+  top:2px;
   &:after {
-    content: "\2191";
+    content: "\2193";
+
   }
 
   &._active {
     &:after {
-      content: "\2193";
+      content: "\2191";
       position: relative;
       z-index: 100;
     }
